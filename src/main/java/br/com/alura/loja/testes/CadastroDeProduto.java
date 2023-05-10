@@ -7,13 +7,14 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import br.com.alura.loja.dao.ProdutoDao;
+import br.com.alura.loja.modelo.Categoria;
 import br.com.alura.loja.modelo.Produto;
 import br.com.alura.loja.util.JPAUtil;
 
 public class CadastroDeProduto {
 	
 	public static void main(String[] args) {
-		Produto celular = new Produto();
+	Produto celular = new Produto("Xiaomi Redmi", "Muito legal", new BigDecimal("800"), Categoria.CELULARES );
 		celular.setNome("Xiaomi Redmi");
 		celular.setDescricao("Muito legal");
 		celular.setPreco(new BigDecimal("800"));
